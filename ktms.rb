@@ -5,13 +5,13 @@
 class Ktms < Formula
   desc "Command-line administration of a Keystone (KTMS) gateway"
   homepage "https://github.com/ai-process/ktms"
-  version "1.3.5"
+  version "1.3.6"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/ai-process/ktms/releases/download/v1.3.5/ktms_1.3.5_darwin_amd64.tar.gz"
-      sha256 "7c1a0432130e5ad2485b332a83cbc94128bed73b494c99c116c27ce7c80f7c9c"
+      url "https://github.com/ai-process/ktms/releases/download/v1.3.6/ktms_1.3.6_darwin_amd64.tar.gz"
+      sha256 "0bbf42483527becf8f9199c864f65de4b4d0c2fd85a4b5d8867bf52b22da7f4e"
 
       define_method(:install) do
         bin.install "ktms"
@@ -19,8 +19,8 @@ class Ktms < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/ai-process/ktms/releases/download/v1.3.5/ktms_1.3.5_darwin_arm64.tar.gz"
-      sha256 "33297d504a60b43e154d41527806b70649ab5f4546891f5637e07eac0c236904"
+      url "https://github.com/ai-process/ktms/releases/download/v1.3.6/ktms_1.3.6_darwin_arm64.tar.gz"
+      sha256 "7836eaf6a0c3c787db17d7f0bf5243de5ca07d1a95a20d7329282b5a01b5068d"
 
       define_method(:install) do
         bin.install "ktms"
@@ -31,16 +31,16 @@ class Ktms < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/ai-process/ktms/releases/download/v1.3.5/ktms_1.3.5_linux_amd64.tar.gz"
-      sha256 "33142b93f6a8b4384b8f197c178f60068bc1dbf20dc33c41e45254b4d22af250"
+      url "https://github.com/ai-process/ktms/releases/download/v1.3.6/ktms_1.3.6_linux_amd64.tar.gz"
+      sha256 "87020d77daaa3e406774c02aaecaaa478903aa1e99ed31363b29713cba75f143"
       define_method(:install) do
         bin.install "ktms"
         generate_completions_from_executable(bin/"ktms", "completion")
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/ai-process/ktms/releases/download/v1.3.5/ktms_1.3.5_linux_arm64.tar.gz"
-      sha256 "6a3a7c8095d8e943caaa45ed6af3637edda39567227d9ff2e807b29e42ac87b3"
+      url "https://github.com/ai-process/ktms/releases/download/v1.3.6/ktms_1.3.6_linux_arm64.tar.gz"
+      sha256 "2ccdb82d20bb864f0ba1792d4b92466c2daf3e08b6bcce6995f1adf4a8c8436d"
       define_method(:install) do
         bin.install "ktms"
         generate_completions_from_executable(bin/"ktms", "completion")
