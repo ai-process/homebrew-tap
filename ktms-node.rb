@@ -5,21 +5,21 @@
 class KtmsNode < Formula
   desc "Node agent that registers a local inference engine with KTMS"
   homepage "https://github.com/ai-process/ktms"
-  version "1.3.4"
+  version "1.3.5"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/ai-process/ktms/releases/download/v1.3.4/ktms-node_1.3.4_darwin_amd64.tar.gz"
-      sha256 "e554a31e1ee6a91269b3b831cdc7f55baee12e9cd5ec121e8f8232f510456adc"
+      url "https://github.com/ai-process/ktms/releases/download/v1.3.5/ktms-node_1.3.5_darwin_amd64.tar.gz"
+      sha256 "f75208d1f75a7b7db2eff723a5d99c819f5bbbf22732baa7eec907a37843316b"
 
       define_method(:install) do
         bin.install "ktms-node"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/ai-process/ktms/releases/download/v1.3.4/ktms-node_1.3.4_darwin_arm64.tar.gz"
-      sha256 "94f645fe29e79450ec996db1dcaa27feb1f9eb35f23a5e0b0d9f3f77f30c7fd4"
+      url "https://github.com/ai-process/ktms/releases/download/v1.3.5/ktms-node_1.3.5_darwin_arm64.tar.gz"
+      sha256 "2fdcf3d60690e14365a033200fc1edde859a6c2acded732d6c5e85273237adc6"
 
       define_method(:install) do
         bin.install "ktms-node"
@@ -29,15 +29,15 @@ class KtmsNode < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/ai-process/ktms/releases/download/v1.3.4/ktms-node_1.3.4_linux_amd64.tar.gz"
-      sha256 "8be2d3bd7cf68da81631f56b68d70d877408de9ac59642931c225035600c039e"
+      url "https://github.com/ai-process/ktms/releases/download/v1.3.5/ktms-node_1.3.5_linux_amd64.tar.gz"
+      sha256 "50f02dc5bf2df57cfacc168ab8c1b12e14c02d09f806048b666bfd7425cc3ee9"
       define_method(:install) do
         bin.install "ktms-node"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/ai-process/ktms/releases/download/v1.3.4/ktms-node_1.3.4_linux_arm64.tar.gz"
-      sha256 "98bf759a87c64cc31d5e0f74a52649832b1175c269f94871b716f83f1f5a49da"
+      url "https://github.com/ai-process/ktms/releases/download/v1.3.5/ktms-node_1.3.5_linux_arm64.tar.gz"
+      sha256 "6d44c848932ff31ec7d7940eda544a9a12a3a771b17d0a0ba3e20ba10b47b450"
       define_method(:install) do
         bin.install "ktms-node"
       end
